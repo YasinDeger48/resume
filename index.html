@@ -72,11 +72,8 @@
 }
         .profile-image{
 border-radius: 70%;
-            width: 150px;
-            height: 150px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
+            width: 140px;
+            height: 140px;
         }
         .company-logo{
   width: 80px;
@@ -117,6 +114,36 @@ border-radius: 70%;
 .paragraph-right {
     text-align: justify;
 }
+        .popup {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #333;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup p {
+    margin: 0;
+    padding: 0;
+}
+
+.popup button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
 
     </style>
 </head>
@@ -331,23 +358,17 @@ border-radius: 70%;
             <li><strong>ISTQB Foundation Level</strong> (2023)</li>
             <li><strong>Katalon</strong> Katalon Expert Level Certification(647be93a9a7f6)</li>
             <li><strong>Lambda Test</strong> LambdaTest Test Automation Professional Certificate</li>
-            <li><strong>Test Automation University</strong> Python Programming(fb2d01a8)</li>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            Github Actions for Testing(7e828294)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            JUnit 5(670ec82e)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            Setting a Foundation for Successful Test
-            Automation(7be724fc)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            The Whole Team Approach to Continuous Testing(1b305c89)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            Salesforce Testing with TestZeus(55b9dd82)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            Playwright with JavaScript(0112ecfb)<br/>
-            <strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>
-            Scaling Tests with Docker(0cdbf720)<br/>
-
+            <li><strong>Test Automation University:</strong></li>
+            <ul>
+                <li>Python Programming (fb2d01a8)</li>
+                <li>Github Actions for Testing (7e828294)</li>
+                <li>JUnit 5 (670ec82e)</li>
+                <li>Setting a Foundation for Successful Test Automation (7be724fc)</li>
+                <li>The Whole Team Approach to Continuous Testing (1b305c89)</li>
+                <li>Salesforce Testing with TestZeus (55b9dd82)</li>
+                <li>Playwright with JavaScript (0112ecfb)</li>
+                <li>Scaling Tests with Docker (0cdbf720)</li>
+            </ul>
         </ul>
     </section>
 </div>
@@ -355,5 +376,26 @@ border-radius: 70%;
 <footer>
     <p>&copy; Yasin Deger</p>
 </footer>
+<div id="popup" class="popup">
+    <p><strong>If you want to see my CV</strong>  <br>CLICK  <button onclick="closePopup()">HERE</button></p>
+
+</div>
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('popup').style.display = 'block';
+        }, 3000);
+    };
+
+    function downloadCV() {
+        var cvUrl = 'images/Yasin Deger.pdf';
+        window.location.href = cvUrl;
+        closePopup();
+    }
+
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
 </body>
 </html>
