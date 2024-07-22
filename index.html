@@ -3,148 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasin DEGER</title>
+    <title>Yasin DEGER - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         header, footer {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
         }
         header h1 {
-            margin: 0;
+        margin: 0;
         }
         .skills-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
         }
         .skills-table th, .skills-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
         }
         .skills-table th {
-            background-color: #f2f2f2;
+        background-color: #f2f2f2;
         }
         .contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.contact-button {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    background-color: #333;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid white;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.contact-button img {
-    margin-right: 10px;
-}
-
-.contact-button:hover {
-    background-color: white;
-    color: #333;
-}
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        }
+        .contact-button {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        background-color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid white;
+        transition: background-color 0.3s, color 0.3s;
+        }
+        .contact-button img {
+        margin-right: 10px;
+        }
+        .contact-button:hover {
+        background-color: white;
+        color: #333;
+        }
         .profile-image{
-border-radius: 70%;
-            width: 140px;
-            height: 140px;
+        border-radius: 70%;
+        width: 140px;
+        height: 140px;
         }
         .company-logo{
-  width: 80px;
-            height: auto;
-            display: block;
-            margin: 10px 0;
+        width: 80px;
+        height: auto;
+        display: block;
+        margin: 10px 0;
         }
         .certifications{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
         }
         .li-certifications{
         float:left;
         }
         .li-images{
-            width: 90px;
-            height: auto;
-            display: block;
-            padding: 10px;
+        width: 90px;
+        height: auto;
+        display: block;
+        padding: 10px;
         }
-
         .paragraph-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.paragraph-left, .paragraph-right {
-    width: 48%;
-}
-
-.paragraph-left {
-    text-align: justify;
-}
-
-.paragraph-right {
-    text-align: justify;
-}
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        }
+        .paragraph-left, .paragraph-right {
+        width: 48%;
+        }
+        .paragraph-left {
+        text-align: justify;
+        }
+        .paragraph-right {
+        text-align: justify;
+        }
         .popup {
-    display: none;
-    position: fixed;
-    top: 150px;
-    right: 20px;
-    background-color: #fff;
-    border: 1px solid #333;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-.popup p {
-    margin: 0;
-    padding: 0;
-}
-
-.popup button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.popup button:hover {
-    background-color: #0056b3;
-}
-
-
+        display: none;
+        position: fixed;
+        top: 50px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #333;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        }
+        .popup p {
+        margin: 0;
+        padding: 0;
+        }
+        .popup button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+        }
+        .popup button:hover {
+        background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -167,16 +155,15 @@ border-radius: 70%;
         <a href="https://medium.com/@yasin.deger" target="_blank" class="contact-button">
             <img src="images/medium.png" alt="Medium" width="20"> Medium
         </a>
-        <a href="https://maps.app.goo.gl/KHRa47ZCsk4YR4h38?g_st=com.google.maps.preview.copy" target="_blank" class="contact-button">
+        <a href="https://maps.app.goo.gl/g52rANrg4aXoJt787" target="_blank" class="contact-button">
             <img src="images/map.webp" alt="Location" width="20"> Izmir, Turkey
         </a>
     </div>
-
     <!--    <div class="menu">
-            <a href="#summary">Summary</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-        </div>-->
+       <a href="#summary">Summary</a>
+       <a href="#skills">Skills</a>
+       <a href="#experience">Experience</a>
+       </div>-->
 </header>
 <div class="container">
     <section id="summary">
@@ -187,19 +174,22 @@ border-radius: 70%;
                     Currently I am working as QA Engineer at TrustMeUp, a company that provides safe and reliable online different type of donation and service purchasing services.
                     My responsibility is to plan and coordinate testing activities and ensuring the highest quality standards and performance measurements.
                     I have a <strong>bachelor's degree in computer science</strong>, <strong>ISTQB Foundation Level</strong> certificate and
-                    multiple certifications in test automation tools and frameworks.</p>
+                    multiple certifications in test automation tools and frameworks.
+                </p>
                 <p>I am highly proficient cloud systems like <strong>Docker</strong> and <strong>Kubernetes</strong>. I have successfully set up and configured Docker-based environments for test executions.</p>
             </div>
             <div class="paragraph-right">
                 <p>I have created a <strong>Selenium, Selenide and
                     Playwright, Cypress, Katalon</strong> frameworks with Java from scratch, implementing test cases to increase test coverage and test
                     efficiency.  I have also performed
-                    various types of functional and non-functional testing</p>
+                    various types of functional and non-functional testing
+                </p>
                 <p>I can use <strong>k6 and Jmeter</strong> as a performance tool to simulate virtual user scenarios and measure the system's
                     response. I leverage <strong>Jenkins, GitHub Actions, GitLab CI, Travis CI, and Buddy.works</strong> for continuous integration.
                     I can set up these environments from scratch and am adept at installing <strong>Jenkins on AWS or remote Linux servers</strong> with ease.,
                     <strong>Jira Xray</strong> for project management, and
-                    <strong>GitHub, Gitlab, Bitbucket</strong> and other platforms of version control and collaboration.</p>
+                    <strong>GitHub, Gitlab, Bitbucket</strong> and other platforms of version control and collaboration.
+                </p>
             </div>
         </div>
     </section>
@@ -243,7 +233,6 @@ border-radius: 70%;
             </tbody>
         </table>
     </section>
-
     <section id="experience">
         <h2>Experience</h2>
         <h3>Trustmeup - QA Engineer Team Lead</h3>
@@ -251,7 +240,8 @@ border-radius: 70%;
         <p><em>May 2023 – Present</em></p>
         <p>I plan and coordinate the testing activities for Web and API applications, ensuring the highest quality
             standards and performance metrics. This project is a web-based application for the donation. Managing and
-            simulating donor behaviors.</p>
+            simulating donor behaviors.
+        </p>
         <ul>
             <li>Implementing Test Cases to increase Test coverage and Test efficiency.</li>
             <li>Creating Playwright framework with Java from scratch.</li>
@@ -263,13 +253,13 @@ border-radius: 70%;
             <li>Involving all Agile Scrum ceremonies.</li>
             <li>Using Slack reporting and communication platform</li>
         </ul>
-
         <h3>Virgosol - Test Architecture Team Lead</h3>
         <img src="images/virgosol.png" alt="Virgosol Logo" class="company-logo">
         <p><em>Sep 2022 – May 2023</em></p>
         <p>I have served in e-commerce CRM and various mobile test projects. After making numerous contributions to the
             test architecture, I was promoted to lead the test architecture team. Being involved in multiple projects,
-            this has been one of the areas where my domain knowledge has significantly developed.</p>
+            this has been one of the areas where my domain knowledge has significantly developed.
+        </p>
         <ul>
             <li>Katalon Studio Instructor.</li>
             <li>Implemented Test Cases to increase Test coverage and Test efficiency.</li>
@@ -280,13 +270,13 @@ border-radius: 70%;
             <li>Involved in all Scrum ceremonies.</li>
             <li>Teams, Zoom, Discord, Slack, and WhatsApp are used as communication platforms</li>
         </ul>
-
         <h3>Fleet Apps - QA Engineer</h3>
         <img src="images/fleetapp.jpeg" alt="Fleet Apps Logo" class="company-logo">
         <p><em>Sep 2021 – Aug 2022</em></p>
         <p>This project is a web-based application for fleet management. This application helps fleet management
             companies to manage all kinds of their logistic issues. It is mainly used for renting, tracking, and
-            maintaining fleets, consisting of monitoring fleet activities and costs.</p>
+            maintaining fleets, consisting of monitoring fleet activities and costs.
+        </p>
         <ul>
             <li>Prepared Test Cases to increase Test coverage and Test efficiency.</li>
             <li>Involved in the creation of Cucumber Behavior Driven Development (BDD) Test Automation Framework from
@@ -302,14 +292,14 @@ border-radius: 70%;
             <li>Involved in all scrum ceremonies (Planning, Daily, Demo, Retro)</li>
             <li>Zoom, Discord, and Meet as a communication platform.</li>
         </ul>
-
         <h3>Applause - Test Automation Engineer</h3>
         <img src="images/applause.png" alt="Applause Logo" class="company-logo">
         <p><em>May 2020 – Mar 2021</em></p>
         <p>This project is a web-based application for enterprise resource planning (ERP). This application organizes
             and manages day-to-day business activities such as accounting, project management and compliance, and supply
             chain operations. This project also includes enterprise performance management software that helps plan,
-            budget, predict, and report on an organization’s financial results.</p>
+            budget, predict, and report on an organization’s financial results.
+        </p>
         <ul>
             <li>Involved in all scrum ceremonies. (Planning, Daily, Demo, Retro)</li>
             <li>Created Test Framework from scratch with JAVA, Selenium, Cucumber, JUnit.</li>
@@ -320,7 +310,6 @@ border-radius: 70%;
             <li>Connected Database with JDBC Library and verified with User Interface.</li>
             <li>Zoom and Discord as a communication platform.</li>
         </ul>
-
         <h3>System Software Manager</h3>
         <img src="images/turkiye.png" alt="Government of Turkey Logo" class="company-logo">
         <p><em>Aug 2009 – Mar 2020</em></p>
@@ -329,24 +318,22 @@ border-radius: 70%;
             and stored and managed this data and prepared some documentation related to them. I worked and tested on
             ship shore ship buffer data-link management system. I took lots of certificates from NATO. At the same time,
             I managed system personnel over a hundred. I gained successful experience in terms of personnel and system
-            management. I am experienced in training for the team and how to behave in a stressful work environment.</p>
+            management. I am experienced in training for the team and how to behave in a stressful work environment.
+        </p>
         <ul>
             <li>Involved in daily ceremonies.</li>
             <li>Maintenance of system software periodically.</li>
             <li>Creating periodic reports and documentation.</li>
         </ul>
     </section>
-
     <section id="education">
         <h2>Education</h2>
         <ul>
             <li><strong>TurAF Academy</strong> - Bachelor’s Degree, Computer Science (2005 – 2009)</li>
         </ul>
     </section>
-
     <section id="certifications">
         <h2>Licences & Certifications</h2>
-
         <ul>
             <ul class="certifications">
                 <li class="li-certifications"><img class="li-images" src="images/istqb.png" alt="ISTQB"></li>
@@ -355,7 +342,7 @@ border-radius: 70%;
                 <li class="li-certifications"><img class="li-images" src="images/tau.png" alt="Test Automation University"></li>
                 <li class="li-certifications"><img class="li-images" src="images/cydeo.png" alt="CYDEO"></li>
             </ul>
-            <li><strong>ISTQB Foundation Level</strong></li>
+            <li><strong>ISTQB Foundation Level</strong> (2023)</li>
             <li><strong>Katalon</strong> Katalon Expert Level Certification(647be93a9a7f6)</li>
             <li><strong>Lambda Test</strong> LambdaTest Test Automation Professional Certificate</li>
             <li><strong>Test Automation University:</strong></li>
@@ -377,7 +364,7 @@ border-radius: 70%;
     <p>&copy; Yasin Deger</p>
 </footer>
 <div id="popup" class="popup">
-        <p><strong>If you want to see my CV</strong>  <br>CLICK <button onclick="downloadCV()">HERE</button></p>
+    <p><strong>For PDF Version</strong>  <br> <button onclick="downloadCV()">CLICK HERE</button><button style="margin-left:10px" onclick="closePopup()">x</button></p>
 </div>
 <script>
     window.onload = function() {
