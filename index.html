@@ -124,11 +124,22 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         }
-        .popup p {
+        .popup2 {
+        display: none;
+        position: fixed;
+        top: 250px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #333;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        }
+        .popup p,.popup2 p {
         margin: 0;
         padding: 0;
         }
-        .popup button {
+        .popup button,.popup2 button {
         background-color: #007bff;
         color: #fff;
         border: none;
@@ -136,7 +147,7 @@
         cursor: pointer;
         border-radius: 4px;
         }
-        .popup button:hover {
+        .popup button:hover,.popup2 button:hover {
         background-color: #0056b3;
         }
     </style>
@@ -373,10 +384,14 @@
 <div id="popup" class="popup">
     <p><strong>PDF Version</strong>  <br> <button onclick="downloadCV()">CLICK HERE</button><button style="margin-left:10px" onclick="closePopup()">x</button></p>
 </div>
+<div id="popup2" class="popup2">
+    <p><strong>Sample Report</strong>  <br> <button onclick="downloadReport()">CLICK HERE</button><button style="margin-left:10px" onclick="closePopup2()">x</button></p>
+</div>
 <script>
     window.onload = function() {
         setTimeout(function() {
             document.getElementById('popup').style.display = 'block';
+            document.getElementById('popup2').style.display = 'block';
         }, 3000);
     };
 
@@ -385,9 +400,16 @@
         window.location.href = cvUrl;
         closePopup();
     }
-
-    function closePopup() {
+     function downloadReport() {
+        var Url = 'images/Report.pdf';
+        window.location.href = Url;
+        closePopup2();
+    }
+   function closePopup() {
         document.getElementById('popup').style.display = 'none';
+    }
+    function closePopup2() {
+        document.getElementById('popup2').style.display = 'none';
     }
 </script>
 </body>
