@@ -1,467 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasin DEGER - Resume</title>
-    <style>
-        body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        }
-        .container {
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-        background: #fff;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        header, footer {
-        background: #333;
-        color: #fff;
-        padding: 10px 0;
-        text-align: center;
-        }
-        header h1 {
-        margin: 0;
-        }
-        .skills-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        }
-        .skills-table th, .skills-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-        }
-        .skills-table th {
-        background-color: #f2f2f2;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasin DEGER - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+:root {
+    --primary: #4494e3; /* LinkedIn mavisi */
+    --secondary: #f1f3f4;
+    --text-dark: #202124;
+    --text-light: #5f6368;
+}
+
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--secondary);
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+    }
+
+    header,
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    nav.sticky-nav {
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    nav.sticky-nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin: auto;
+    }
+
     .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .contact-button {
+      text-decoration: none;
+      background: var(--primary);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .contact-button:hover {
+      background: white;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+    }
+
+    .contact-button img {
+      width: 20px;
+      margin-right: 8px;
+    }
+
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .experience-card {
+      background: #f9f9f9;
+      border-left: 4px solid var(--primary);
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    .experience-card img {
+      width: 80px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .hero {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    .certifications {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    .certifications img {
+      width: 50px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .certifications img:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .contact-info {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .experience-card {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/128.png" alt="Yasin DEGER" class="profile-image" />
+        <h1>Yasin DEĞER</h1>
+        <div class="contact-info">
+            <a href="mailto:yasin.deger48@gmail.com" class="contact-button"><img src="images/email.png" />Send Mail</a>
+            <a href="tel:+905308729244" class="contact-button"><img src="images/phone.png" />+90 530 872 92 44</a>
+        </div>
+    </header>
+
+    <nav class="sticky-nav">
+        <a href="#summary">Summary</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <p class="animated-joke">🧪 Running tests... ☕ Waiting for bugs to show up... 🐞🐞🐞</p>
+        </section>
+        
+        <style>
+        .animated-hero {
+            font-size: 2.5rem;
+            animation: bounce 1.5s infinite;
+            color: var(--primary);
         }
-        .contact-button {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            background-color: #333;
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: 1px solid gray;
-            transition: background-color 0.3s, color 0.3s;
-            flex-grow: 1;
+        
+        .animated-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            animation: fadeInLeft 2s ease-in-out;
         }
-        .contact-button img {
-            margin-right: 10px;
+        
+        .animated-joke {
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+            animation: typewriter 3s steps(40, end);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #000;
         }
-        .contact-button:hover {
-            background-color: white;
-            color: #333;
-        }
-        @media (max-width: 380px) {
-            .contact-button {
-                flex-basis: calc(50% - 10px);
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
             }
         }
-        .profile-image{
-        border-radius: 50%;
-        width: 140px;
-        height: 140px;
+        
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
-        .company-logo{
-        width: 80px;
-        height: auto;
-        display: block;
-        margin: 10px 0;
+        
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
         }
-        .certifications{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        }
-        .li-certifications{
-        float:left;
-        }
-        .li-images{
-        width: 90px;
-        height: auto;
-        display: block;
-        padding: 10px;
-        }
-        .paragraph-container {
-        display: flex;
-        justify-content: space-between;
-        margin: 20px 0;
-        }
-        .paragraph-left, .paragraph-right {
-        width: 48%;
-        }
-        .paragraph-left {
-        text-align: justify;
-        }
-        .paragraph-right {
-        text-align: justify;
-        }
-        .popup {
-        display: none;
-        position: fixed;
-        top: 150px;
-        right: 20px;
-        background-color: #fff;
-        border: 1px solid #333;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        }
-        .popup2 {
-        display: none;
-        position: fixed;
-        top: 250px;
-        right: 20px;
-        background-color: #fff;
-        border: 1px solid #333;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        }
-        .popup p,.popup2 p {
-        margin: 0;
-        padding: 0;
-        }
-        .popup button,.popup2 button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        border-radius: 4px;
-        }
-        .popup button:hover,.popup2 button:hover {
-        background-color: #0056b3;
-        }
-       h2 {
-    animation: fadeIn 2s ease-in-out;
-}
+        </style>
+        
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-footer {
-    animation: slideUp 2s ease-in-out;
-}
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>10+ years of Software Engineering and <strong>Quality Engineer experience</strong>, extensive knowledge
+                in various automation tools and programming languages.
+                I have a <strong>bachelor's degree in computer science</strong>, <strong>ISTQB Foundation Level</strong>
+                certificate and
+                multiple certifications in test automation tools and frameworks.
+            </p>
+            <p>I am highly proficient cloud systems like <strong>Docker</strong> and <strong>Kubernetes</strong>. I have
+                successfully set up and configured Docker-based environments for test executions.</p>
+            <p>I have created a <strong>Selenium, Selenide and
+                    Playwright, Cypress, Katalon</strong> frameworks with Java from scratch, implementing test cases to
+                increase test coverage and test
+                efficiency. I have also performed
+                various types of functional and non-functional testing
+            </p>
+            <p>I can use <strong>k6 and Jmeter</strong> as a performance tool to simulate virtual user scenarios and
+                measure the system's
+                response. I leverage <strong>Jenkins, GitHub Actions, GitLab CI, Travis CI, and Buddy.works</strong> for
+                continuous integration.
+                I can set up these environments from scratch and am adept at installing <strong>Jenkins on AWS or remote
+                    Linux servers</strong> with ease.,
+                <strong>Jira Xray</strong> for project management, and
+                <strong>GitHub, Gitlab, Bitbucket</strong> and other platforms of version control and collaboration.
+            </p>
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.contact-button:hover {
-    background-color: white;
-    color: #333;
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
+        </section>
 
-    </style>
-</head>
-<body>
-<header>
-    <div class="contact-button" style="margin: 20px">
-        <img src="images/128.png" alt="Yasin DEGER" class="profile-image">
-        <h1>Yasin DEĞER</h1><br>
-    </div>
-
-    <div class="contact-info">
-        <a href="mailto:yasin.deger48@gmail.com" target="_blank" class="contact-button">
-            <img src="images/email.png" alt="Email" width="20"> Send Mail
-        </a>
-        <a href="tel:+905308729244" target="_blank" class="contact-button">
-            <img src="images/phone.png" alt="Phone" width="20"> +90 530 872 92 44
-        </a>
-        <a href="https://linkedin.com/in/yasindeger" target="_blank" class="contact-button">
-            <img src="images/linkedin.webp" alt="LinkedIn" width="20"> LinkedIn
-        </a>
-        <a href="https://github.com/YasinDeger48" target="_blank" class="contact-button">
-            <img src="images/github.png" alt="GitHub" width="20"> GitHub
-        </a>
-        <a href="https://www.youtube.com/@QAEnginnerOps" target="_blank" class="contact-button">
-            <img src="images/youtube.png" alt="Youtube" width="20"> Youtube
-        </a>
-        <a href="https://medium.com/@yasin.deger" target="_blank" class="contact-button">
-            <img src="images/medium.png" alt="Medium" width="20"> Medium
-        </a>
-        <a href="https://maps.app.goo.gl/g52rANrg4aXoJt787" target="_blank" class="contact-button">
-            <img src="images/map.webp" alt="Location" width="20"> Izmir, Turkey
-        </a>
-    </div>
-</header>
-<div class="container">
-    <section id="summary">
-        <h2>Summary</h2>
-        <div class="paragraph-container">
-            <div class="paragraph-left">
-                <p>10+ years of Software Engineering and <strong>Quality Engineer experience</strong>, extensive knowledge in various automation tools and programming languages.
-                        I have a <strong>bachelor's degree in computer science</strong>, <strong>ISTQB Foundation Level</strong> certificate and
-                    multiple certifications in test automation tools and frameworks.
-                </p>
-                <p>I am highly proficient cloud systems like <strong>Docker</strong> and <strong>Kubernetes</strong>. I have successfully set up and configured Docker-based environments for test executions.</p>
-            </div>
-            <div class="paragraph-right">
-                <p>I have created a <strong>Selenium, Selenide and
-                    Playwright, Cypress, Katalon</strong> frameworks with Java from scratch, implementing test cases to increase test coverage and test
-                    efficiency.  I have also performed
-                    various types of functional and non-functional testing
-                </p>
-                <p>I can use <strong>k6 and Jmeter</strong> as a performance tool to simulate virtual user scenarios and measure the system's
-                    response. I leverage <strong>Jenkins, GitHub Actions, GitLab CI, Travis CI, and Buddy.works</strong> for continuous integration.
-                    I can set up these environments from scratch and am adept at installing <strong>Jenkins on AWS or remote Linux servers</strong> with ease.,
-                    <strong>Jira Xray</strong> for project management, and
-                    <strong>GitHub, Gitlab, Bitbucket</strong> and other platforms of version control and collaboration.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <table class="skills-table">
-            <thead>
-            <tr>
-                <th>Category</th>
-                <th>Skills</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Programming Languages</td>
-                <td>Java, JavaScript</td>
-            </tr>
-            <tr>
-                <td>CI/CD</td>
-                <td>Jenkins, GitHub Actions, TravisCI, Buddy, Device Farm Structures</td>
-            </tr>
-            <tr>
-                <td>Testing Framework/Tools</td>
-                <td>Playwright, Selenium, Selenide, Appium (iOS and Android), Katalon Studio, Silk Test, TestNG, Junit,
-                    Cucumber BDD, Gauge BDD, Postman, Maven, Rest Assured, SOAP, Docker and K8, SQL and NoSQL with JDBC,
-                    Selenium GRID, K6 Grafana, JMeter, Apache POI
-                </td>
-            </tr>
-            <tr>
-                <td>IDE</td>
-                <td>IntelliJ, Eclipse, VS Code, XCode, Android Studio</td>
-            </tr>
-            <tr>
-                <td>Bug Tracking Tool</td>
-                <td>JIRA, Trello</td>
-            </tr>
-            <tr>
-                <td>Operating System</td>
-                <td>MacOS X, Windows, Linux</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <h3>Fidelis Security - Quality Assurance Engineer</h3>
-        <img src="images/fidelis.png" alt="Fidelis Security Logo" class="company-logo">
-        <p><em>Dec 2024 – Present</em></p>
-        <ul> 
-            <li>Developing and maintaining automation test frameworks for network security applications.</li> 
-            <li>Executing manual and automated tests on security protocols and analytics dashboards.</li> 
-            <li>Designing and expanding test coverage across UI, API, and performance layers.</li> 
-            <li>Conducting security-focused validation on logs, metadata, and alarm events.</li> 
-            <li>Simulating decoy server environments and validating attack detection mechanisms in test scenarios.</li> 
-            <li>Writing and executing test cases for asset management, subnets, domains, and endpoint configurations.</li> 
-            <li>Verifying role-based access control and user directory security through Active Directory testing.</li> 
-            <li>Testing system response and stability through log monitoring and system-level validations.</li> 
-            <li>Designing and running tests for Windows systems under SUVP (Software Update Validation Program).</li> 
-            <li>Performing test-oriented configuration, deployment, and maintenance of VM-based server infrastructures.</li> 
-            <li>Creating UI regression and end-to-end test scenarios using Selenium WebDriver.</li> 
-            <li>Managing test plans, issue tracking, and sprint test cycles via JIRA.</li> 
-        </ul>
-
-        <h3>Trustmeup - QA Engineer Team Lead</h3>
-        <img src="images/trustmeup.webp" alt="Trustmeup Logo" class="company-logo">
-        <p><em>May 2023 – Dec 2024</em></p>
-        <p>I plan and coordinate the testing activities for Web and API applications, ensuring the highest quality
-            standards and performance metrics. This project is a web-based application for the donation. Managing and
-            simulating donor behaviors.
-        </p>
-        <ul>
-            <li>Implementing Test Cases to increase Test coverage and Test efficiency.</li>
-            <li>Creating Playwright framework with Java from scratch.</li>
-            <li>Performed different types of testing such as Functional and Non-functional.</li>
-            <li>Functional part consists of smoke, regression, positive, negative and boundary value analysis.</li>
-            <li>Non-functional part consists of stress, load and spike testing with k6 performance tool.</li>
-            <li>Implementing Jenkins for Continuous Integration</li>
-            <li>Jira Xray is used as project management tool.</li>
-            <li>Involving all Agile Scrum ceremonies.</li>
-            <li>Using Slack reporting and communication platform</li>
-        </ul>
-        <h3>Virgosol - Test Architecture Team Lead</h3>
-        <img src="images/virgosol.png" alt="Virgosol Logo" class="company-logo">
-        <p><em>Sep 2022 – May 2023</em></p>
-        <p>I have served in e-commerce CRM and various mobile test projects. After making numerous contributions to the
-            test architecture, I was promoted to lead the test architecture team. Being involved in multiple projects,
-            this has been one of the areas where my domain knowledge has significantly developed.
-        </p>
-        <ul>
-            <li>Katalon Studio Instructor.</li>
-            <li>Implemented Test Cases to increase Test coverage and Test efficiency.</li>
-            <li>Involved in the creation of different types of Test Automation Frameworks.</li>
-            <li>Performed different Test types such as Smoke, Regression, Positive and Negative Testing.</li>
-            <li>Used Jira and Trello as project management tools.</li>
-            <li>Involved in different platforms such as Web, Database, API, Mobile, Desktop (Katalon).</li>
-            <li>Involved in all Scrum ceremonies.</li>
-            <li>Teams, Zoom, Discord, Slack, and WhatsApp are used as communication platforms</li>
-        </ul>
-        <h3>Fleet Apps - QA Engineer</h3>
-        <img src="images/fleetpp.jpeg" alt="Fleet Logo" class="company-logo">
-        <p><em>Sep 2021 – Aug 2022</em></p>
-        <p>This project is a web-based application for fleet management. This application helps fleet management
-            companies to manage all kinds of their logistic issues. It is mainly used for renting, tracking, and
-            maintaining fleets, consisting of monitoring fleet activities and costs.
-        </p>
-        <ul>
-            <li>Prepared Test Cases to increase Test coverage and Test efficiency.</li>
-            <li>Involved in the creation of Cucumber Behavior Driven Development (BDD) Test Automation Framework from
-                scratch using Selenium WebDriver, JUnit, Maven, JAVA by utilizing Page Object Model.
-            </li>
-            <li>Implemented Gherkin language in Test scenarios.</li>
-            <li>Performed different Test types for the implementation of the project such as Regression, Smoke, Positive
-                and Negative Testing.
-            </li>
-            <li>Used Git/GitHub as the Version Control System</li>
-            <li>Used JIRA X-ray as the Defect Tracking tool.</li>
-            <li>Run SQL queries and used JDBC for validating the data in the database.</li>
-            <li>Involved in all scrum ceremonies (Planning, Daily, Demo, Retro)</li>
-            <li>Zoom, Discord, and Meet as a communication platform.</li>
-        </ul>
-        <h3>Applause - Test Automation Engineer</h3>
-        <img src="images/applause.png" alt="Applause Logo" class="company-logo">
-        <p><em>May 2020 – Mar 2021</em></p>
-        <p>This project is a web-based application for enterprise resource planning (ERP). This application organizes
-            and manages day-to-day business activities such as accounting, project management and compliance, and supply
-            chain operations. This project also includes enterprise performance management software that helps plan,
-            budget, predict, and report on an organization’s financial results.
-        </p>
-        <ul>
-            <li>Involved in all scrum ceremonies. (Planning, Daily, Demo, Retro)</li>
-            <li>Created Test Framework from scratch with JAVA, Selenium, Cucumber, JUnit.</li>
-            <li>Performed manual Testing, regression, and smoke Testing.</li>
-            <li>Created tickets for Test, bug report, and Test executions in JIRA X-ray.</li>
-            <li>Implemented parallel Testing.</li>
-            <li>Executed on Jenkins and getting reports via email.</li>
-            <li>Connected Database with JDBC Library and verified with User Interface.</li>
-            <li>Zoom and Discord as a communication platform.</li>
-        </ul>
-        <h3>System Software Manager</h3>
-        <img src="images/turkiye.png" alt="Government of Turkey Logo" class="company-logo">
-        <p><em>Aug 2009 – Mar 2020</em></p>
-        <p>I worked as a Software Manager Officer. During this time, I was dealing with big data coming from computer
-            systems
-            and stored and managed this data and prepared some documentation related to them. I worked and tested on
-            ship shore ship buffer data-link management system. I took lots of certificates from NATO. At the same time,
-            I managed system personnel over a hundred. I gained successful experience in terms of personnel and system
-            management. I am experienced in training for the team and how to behave in a stressful work environment.
-        </p>
-        <ul>
-            <li>Involved in daily ceremonies.</li>
-            <li>Maintenance of system software periodically.</li>
-            <li>Creating periodic reports and documentation.</li>
-        </ul>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>TurAF Academy</strong> - Bachelor’s Degree, Computer Science (2005 – 2009)</li>
-        </ul>
-    </section>
-    <section id="certifications">
-        <h2>Licences & Certifications</h2>
-        <ul>
-            <ul class="certifications">
-                <li class="li-certifications"><img class="li-images" src="images/istqb.png" alt="ISTQB"></li>
-                <li class="li-certifications"><img class="li-images" src="images/lambda.png" alt="Lambda"></li>
-                <li class="li-certifications"><img class="li-images" src="images/katalon.png" alt="Katalon"></li>
-                <li class="li-certifications"><img class="li-images" src="images/tau.png" alt="Test Automation University"></li>
-                <li class="li-certifications"><img class="li-images" src="images/cydeo.png" alt="CYDEO"></li>
-            </ul>
-            <li><strong>ISTQB Foundation Level</strong> (2023)</li>
-            <li><strong>Katalon</strong> Katalon Expert Level Certification(647be93a9a7f6)</li>
-            <li><strong>Lambda Test</strong> LambdaTest Test Automation Professional Certificate</li>
-            <li><strong>Test Automation University:</strong></li>
+        <section id="skills">
+            <h2>Skills</h2>
             <ul>
-                <li>Python Programming (fb2d01a8)</li>
-                <li>Github Actions for Testing (7e828294)</li>
-                <li>JUnit 5 (670ec82e)</li>
-                <li>Setting a Foundation for Successful Test Automation (7be724fc)</li>
-                <li>The Whole Team Approach to Continuous Testing (1b305c89)</li>
-                <li>Salesforce Testing with TestZeus (55b9dd82)</li>
-                <li>Playwright with JavaScript (0112ecfb)</li>
-                <li>Scaling Tests with Docker (0cdbf720)</li>
+                <li><strong>Languages:</strong> Java, JavaScript</li>
+                <li><strong>Tools:</strong> Selenium, Playwright, Appium, JMeter, Katalon, Postman, Rest Assured</li>
+                <li><strong>CI/CD:</strong> Jenkins, GitHub Actions, TravisCI, GitLab</li>
+                <li><strong>Cloud & Containers:</strong> Docker, Kubernetes</li>
+                <li><strong>Platforms:</strong> Mac, Windows, Linux</li>
+                <li><strong>PM Tools:</strong> JIRA, Trello, Xray</li>
             </ul>
-        </ul>
-    </section>
-</div>
-</div>
-<footer>
-    <p>&copy; Yasin Deger</p>
-</footer>
-<!-- <div id="popup" class="popup">
-    <p><strong>PDF Version</strong>  <br> <button onclick="downloadCV()">CLICK HERE</button><button style="margin-left:10px" onclick="closePopup()">x</button></p>
-</div>
-<div id="popup2" class="popup2">
-    <p><strong>Sample Report</strong>  <br> <button onclick="downloadReport()">CLICK HERE</button><button style="margin-left:10px" onclick="closePopup2()">x</button></p>
-</div>
-<script>
-    window.onload = function() {
-        setTimeout(function() {
-            document.getElementById('popup').style.display = 'block';
-            document.getElementById('popup2').style.display = 'block';
-        }, 3000);
-    };
+        </section>
 
-    function downloadCV() {
-        var cvUrl = 'images/Yasin Deger.pdf';
-        window.location.href = cvUrl;
-        closePopup();
-    }
-     function downloadReport() {
-        var Url = 'images/Report.pdf';
-        window.location.href = Url;
-        closePopup2();
-    }
-   function closePopup() {
-        document.getElementById('popup').style.display = 'none';
-    }
-    function closePopup2() {
-        document.getElementById('popup2').style.display = 'none';
-    } -->
-</script>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-card">
+                <img src="images/fidelis.png" alt="Fidelis Security" />
+                <h3>Fidelis Security - Quality Assurance Engineer</h3>
+                <p><em>Dec 2024 – Present</em></p>
+                <ul>
+                    <li>Developing and maintaining automation test frameworks for network security applications.</li> 
+                    <li>Executing manual and automated tests on security protocols and analytics dashboards.</li> 
+                    <li>Designing and expanding test coverage across UI, API, and performance layers.</li> 
+                    <li>Conducting security-focused validation on logs, metadata, and alarm events.</li> 
+                    <li>Simulating decoy server environments and validating attack detection mechanisms in test scenarios.</li> 
+                    <li>Writing and executing test cases for asset management, subnets, domains, and endpoint configurations.</li> 
+                    <li>Verifying role-based access control and user directory security through Active Directory testing.</li> 
+                    <li>Testing system response and stability through log monitoring and system-level validations.</li> 
+                    <li>Designing and running tests for Windows systems under SUVP (Software Update Validation Program).</li> 
+                    <li>Performing test-oriented configuration, deployment, and maintenance of VM-based server infrastructures.</li> 
+                    <li>Creating UI regression and end-to-end test scenarios using Selenium WebDriver.</li> 
+                    <li>Managing test plans, issue tracking, and sprint test cycles via JIRA.</li> 
+                </ul>
+            </div>
+            
+            <div class="experience-card">
+                <img src="images/trustmeup.webp" alt="Trustmeup Logo" class="company-logo">
+                <h3>Trustmeup - QA Engineer Team Lead</h3>
+                <p><em>May 2023 – Dec 2024</em></p>
+
+
+                <ul>
+                    <li>Implementing Test Cases to increase Test coverage and Test efficiency.</li>
+                    <li>Creating Playwright framework with Java from scratch.</li>
+                    <li>Performed different types of testing such as Functional and Non-functional.</li>
+                    <li>Functional part consists of smoke, regression, positive, negative and boundary value analysis.</li>
+                    <li>Non-functional part consists of stress, load and spike testing with k6 performance tool.</li>
+                    <li>Implementing Jenkins for Continuous Integration</li>
+                    <li>Jira Xray is used as project management tool.</li>
+                    <li>Involving all Agile Scrum ceremonies.</li>
+                    <li>Using different reporting and communication platforms</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <img src="images/virgosol.png" alt="Virgosol Logo" class="company-logo">
+                <h3>Virgosol - Test Architecture Team Lead</h3>
+                <p><em>Sep 2022 – May 2023</em></p>
+
+                <ul>
+                    <li>Katalon Studio Instructor.</li>
+                    <li>Implemented Test Cases to increase Test coverage and Test efficiency.</li>
+                    <li>Involved in the creation of different types of Test Automation Frameworks.</li>
+                    <li>Performed different Test types such as Smoke, Regression, Positive and Negative Testing.</li>
+                    <li>Used Jira and Trello as project management tools.</li>
+                    <li>Involved in different platforms such as Web, Database, API, Mobile, Desktop (Katalon).</li>
+                    <li>Involved in all Scrum ceremonies.</li>
+                    <li>Teams, Zoom, Discord, Slack, and WhatsApp are used as communication platforms</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <img src="images/fleetpp.jpeg" alt="Fleet Logo" class="company-logo">
+                <h3>Fleet Apps - QA Engineer</h3>
+                <p><em>Sep 2021 – Aug 2022</em></p>
+
+                <ul>
+                    <li>Prepared Test Cases to increase Test coverage and Test efficiency.</li>
+                    <li>Involved in the creation of Cucumber Behavior Driven Development (BDD) Test Automation Framework from
+                        scratch using Selenium WebDriver, JUnit, Maven, JAVA by utilizing Page Object Model.
+                    </li>
+                    <li>Implemented Gherkin language in Test scenarios.</li>
+                    <li>Performed different Test types for the implementation of the project such as Regression, Smoke, Positive
+                        and Negative Testing.
+                    </li>
+                    <li>Used Git/GitHub as the Version Control System</li>
+                    <li>Used JIRA X-ray as the Defect Tracking tool.</li>
+                    <li>Run SQL queries and used JDBC for validating the data in the database.</li>
+                    <li>Involved in all scrum ceremonies (Planning, Daily, Demo, Retro)</li>
+                    <li>Zoom, Discord, and Meet as a communication platform.</li>
+                </ul>
+            </div>
+
+
+            <div class="experience-card">
+                <img src="images/applause.png" alt="Applause Logo" class="company-logo">
+                <h3>Applause - Test Automation Engineer</h3>
+                <p><em>May 2020 – Mar 2021</em></p>
+
+                <ul>
+                    <li>Involved in all scrum ceremonies. (Planning, Daily, Demo, Retro)</li>
+                    <li>Created Test Framework from scratch with JAVA, Selenium, Cucumber, JUnit.</li>
+                    <li>Performed manual Testing, regression, and smoke Testing.</li>
+                    <li>Created tickets for Test, bug report, and Test executions in JIRA X-ray.</li>
+                    <li>Implemented parallel Testing.</li>
+                    <li>Executed on Jenkins and getting reports via email.</li>
+                    <li>Connected Database with JDBC Library and verified with User Interface.</li>
+                    <li>Zoom and Discord as a communication platform.</li>
+                </ul>
+            </div>
+
+            <div class="experience-card">
+                <img src="images/turkiye.png" alt="Government of Turkey Logo" class="company-logo">
+                <h3>System Software Manager</h3>
+                <p><em>Aug 2009 – Mar 2020</em></p>
+                <ul>
+                    <li>Involved in daily ceremonies.</li>
+                    <li>Maintenance of system software periodically.</li>
+                    <li>Creating periodic reports and documentation.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>TurAF Academy – Bachelor of Computer Science (2005–2009)</li>
+            </ul>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul class="certifications">
+              <li><img src="images/istqb.png" alt="ISTQB" /></li>
+              <li><img src="images/lambda.png" alt="Lambda" /></li>
+              <li><img src="images/katalon.png" alt="Katalon" /></li>
+              <li><img src="images/tau.png" alt="Test Automation University" /></li>
+              <li><img src="images/cydeo.png" alt="CYDEO" /></li>
+            </ul>
+            <ul>
+              <li><strong>ISTQB Foundation Level</strong> (2023)</li>
+              <li><strong>Katalon</strong> Expert Level Certification</li>
+              <li><strong>LambdaTest</strong> Test Automation Professional Certificate</li>
+              <li><strong>Test Automation University Courses:</strong>
+                <ul>
+                  <li>Python Programming</li>
+                  <li>GitHub Actions for Testing</li>
+                  <li>JUnit 5</li>
+                  <li>Setting a Foundation for Successful Test Automation</li>
+                  <li>The Whole Team Approach to Continuous Testing</li>
+                  <li>Salesforce Testing with TestZeus</li>
+                  <li>Playwright with JavaScript</li>
+                  <li>Scaling Tests with Docker</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+    </div>
+
+    <footer>
+        <p>&copy; Yasin DEĞER</p>
+    </footer>
 </body>
+
 </html>
